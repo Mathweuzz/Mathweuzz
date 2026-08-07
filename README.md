@@ -102,23 +102,6 @@ I am a Computer Science developer from Brasília who likes to cross abstraction 
   - [ConstelaçãoSQL](https://github.com/Mathweuzz/ConstelacaoSQL) — database work in PL/pgSQL.
 </details>
 
-## Runtime statistics
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Mathweuzz&show_icons=true&hide_border=true&bg_color=00000000&title_color=a78bfa&text_color=cbd5e1&icon_color=22d3ee&rank_icon=github" />
-    <img height="175" src="https://github-readme-stats.vercel.app/api?username=Mathweuzz&show_icons=true&hide_border=true&title_color=7c3aed&text_color=334155&icon_color=0891b2&rank_icon=github" alt="Mateus's GitHub statistics" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Mathweuzz&layout=compact&hide_border=true&bg_color=00000000&title_color=a78bfa&text_color=cbd5e1&langs_count=8" />
-    <img height="175" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mathweuzz&layout=compact&hide_border=true&title_color=7c3aed&text_color=334155&langs_count=8" alt="Most used languages" />
-  </picture>
-</div>
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Mathweuzz&bg_color=00000000&color=a78bfa&line=22d3ee&point=fb7185&area=true&area_color=7c3aed&hide_border=true&custom_title=CONTRIBUTION%20SIGNAL" width="100%" alt="Contribution graph" />
-</div>
-
 <div align="center">
   <img src="./assets/signal.svg" width="100%" alt="animated signal" />
   <samp>Build the abstraction. Then look underneath it.</samp>
