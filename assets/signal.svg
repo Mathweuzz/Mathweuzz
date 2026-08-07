@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="74" viewBox="0 0 1200 74" role="img" aria-label="Animated signal divider">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#22d3ee" stop-opacity="0"/><stop offset=".2" stop-color="#22d3ee"/><stop offset=".52" stop-color="#a78bfa"/><stop offset=".82" stop-color="#fb7185"/><stop offset="1" stop-color="#fb7185" stop-opacity="0"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <style>.wave{stroke:url(#g);stroke-width:2;fill:none;stroke-linecap:round;stroke-dasharray:10 18;animation:move 2.5s linear infinite}.dot{fill:#c4b5fd;filter:url(#glow);animation:pulse 1.8s ease-in-out infinite}@keyframes move{to{stroke-dashoffset:-112}}@keyframes pulse{50%{r:6;opacity:.5}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+  <path class="wave" d="M0 37H190l18-18 24 36 28-54 30 68 26-49 25 17h158l20-13 21 25 25-42 31 58 28-45 26 17h178l18-18 24 36 28-54 30 68 26-49 25 17h191"/>
+  <circle class="dot" cx="600" cy="37" r="3"/>
+</svg>

@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Mateus Araujo neural network laboratory</title>
+  <desc id="desc">Animated neural network training dashboard with forward and backward propagation pulses and a converging loss curve.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050914"/>
+      <stop offset="0.52" stop-color="#081122"/>
+      <stop offset="1" stop-color="#100a20"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#22d3ee" stop-opacity=".14"/>
+      <stop offset=".52" stop-color="#818cf8" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#f472b6" stop-opacity=".2"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#67e8f9"/>
+      <stop offset=".55" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#fb7185"/>
+    </linearGradient>
+    <linearGradient id="chart" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#fb7185"/>
+      <stop offset=".65" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="node">
+      <stop stop-color="#e0f2fe"/>
+      <stop offset=".25" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#0891b2"/>
+    </radialGradient>
+    <filter id="glow" x="-200%" y="-200%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#93c5fd" stroke-opacity=".045" stroke-width="1"/>
+    </pattern>
+    <clipPath id="card"><rect x="14" y="14" width="1172" height="532" rx="26"/></clipPath>
+  </defs>
+  <style>
+    .sans{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+    .edge{stroke:url(#edge);stroke-width:1.15;fill:none}
+    .flow{stroke:url(#signal);stroke-width:2;fill:none;stroke-linecap:round;stroke-dasharray:3 24;animation:forward 2.7s linear infinite;filter:url(#glow)}
+    .back{stroke:#f472b6;stroke-opacity:.68;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-dasharray:2 34;animation:backward 3.5s linear infinite}
+    .n{fill:url(#node);stroke:#cffafe;stroke-width:1;filter:url(#glow)}
+    .nh{fill:#a78bfa;stroke:#ede9fe;stroke-width:1;filter:url(#glow)}
+    .no{fill:#fb7185;stroke:#ffe4e6;stroke-width:1;filter:url(#glow)}
+    .pulse{animation:pulse 2.2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .pulse2{animation:pulse 2.2s .7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .pulse3{animation:pulse 2.2s 1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .loss{stroke:url(#chart);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:460;animation:draw 4.8s ease-in-out infinite}
+    .cursor{animation:blink 1s steps(2,end) infinite}
+    .scan{animation:scan 5s ease-in-out infinite}
+    .status{animation:status 3s ease-in-out infinite}
+    @keyframes forward{to{stroke-dashoffset:-108}}
+    @keyframes backward{to{stroke-dashoffset:108}}
+    @keyframes pulse{0%,100%{transform:scale(.88);opacity:.62}50%{transform:scale(1.24);opacity:1}}
+    @keyframes draw{0%{stroke-dashoffset:460;opacity:.15}42%,82%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:-460;opacity:.15}}
+    @keyframes blink{50%{opacity:0}}
+    @keyframes scan{0%,100%{transform:translateX(0);opacity:0}10%,80%{opacity:.45}90%{transform:translateX(568px);opacity:0}}
+    @keyframes status{0%,100%{opacity:.45}50%{opacity:1}}
+    @media (prefers-reduced-motion:reduce){*{animation-duration:0.001ms!important;animation-iteration-count:1!important}}
+  </style>
+
+  <rect x="14" y="14" width="1172" height="532" rx="26" fill="url(#bg)" stroke="#334155" stroke-width="1.5"/>
+  <g clip-path="url(#card)">
+    <rect x="14" y="14" width="1172" height="532" fill="url(#grid)"/>
+    <circle cx="1040" cy="-20" r="250" fill="#7c3aed" opacity=".12" filter="url(#soft)"/>
+    <circle cx="70" cy="540" r="230" fill="#0891b2" opacity=".11" filter="url(#soft)"/>
+    <rect class="scan" x="200" y="14" width="1.5" height="532" fill="#67e8f9" filter="url(#glow)"/>
+  </g>
+
+  <g class="sans">
+    <circle cx="52" cy="48" r="5" fill="#fb7185"/><circle cx="70" cy="48" r="5" fill="#fbbf24"/><circle cx="88" cy="48" r="5" fill="#34d399"/>
+    <text x="112" y="53" fill="#64748b" font-size="13" letter-spacing="1.5">NEURAL_LAB / PROFILE.RUN</text>
+    <rect x="1016" y="35" width="132" height="27" rx="13.5" fill="#052e2b" stroke="#115e59"/>
+    <circle class="status" cx="1034" cy="48.5" r="4" fill="#2dd4bf" filter="url(#glow)"/>
+    <text x="1047" y="53" fill="#5eead4" font-size="11" font-weight="700" letter-spacing="1.4">TRAINING</text>
+
+    <text x="58" y="111" fill="#94a3b8" font-size="14" letter-spacing="3">MATEUS ARAÚJO</text>
+    <text x="56" y="157" fill="#f8fafc" font-size="39" font-weight="760">I build intelligence</text>
+    <text x="56" y="199" fill="#c4b5fd" font-size="39" font-weight="760">from first principles.</text>
+    <text x="58" y="231" fill="#64748b" font-size="14">AI • compilers • virtual machines • systems</text>
+  </g>
+
+  <g transform="translate(46 264)">
+    <rect width="448" height="242" rx="18" fill="#07101f" fill-opacity=".83" stroke="#1e293b"/>
+    <text class="mono" x="22" y="32" fill="#64748b" font-size="11" letter-spacing="1.7">LIVE MODEL GRAPH</text>
+    <text class="mono" x="335" y="32" fill="#22d3ee" font-size="10">forward()</text>
+
+    <!-- dense connections -->
+    <g class="edge">
+      <path d="M62 72L168 58M62 72L168 102M62 72L168 146M62 72L168 190M62 118L168 58M62 118L168 102M62 118L168 146M62 118L168 190M62 164L168 58M62 164L168 102M62 164L168 146M62 164L168 190"/>
+      <path d="M168 58L282 78M168 58L282 126M168 58L282 174M168 102L282 78M168 102L282 126M168 102L282 174M168 146L282 78M168 146L282 126M168 146L282 174M168 190L282 78M168 190L282 126M168 190L282 174"/>
+      <path d="M282 78L390 106M282 78L390 158M282 126L390 106M282 126L390 158M282 174L390 106M282 174L390 158"/>
+    </g>
+    <g class="flow">
+      <path d="M62 72L168 102L282 78L390 106"/>
+      <path d="M62 118L168 146L282 126L390 158"/>
+      <path d="M62 164L168 190L282 174L390 106"/>
+    </g>
+    <g class="back"><path d="M390 158L282 126L168 58L62 118"/><path d="M390 106L282 174L168 146L62 72"/></g>
+
+    <g><circle class="n pulse" cx="62" cy="72" r="7"/><circle class="n pulse2" cx="62" cy="118" r="7"/><circle class="n pulse3" cx="62" cy="164" r="7"/></g>
+    <g><circle class="nh pulse2" cx="168" cy="58" r="7"/><circle class="nh pulse3" cx="168" cy="102" r="7"/><circle class="nh pulse" cx="168" cy="146" r="7"/><circle class="nh pulse2" cx="168" cy="190" r="7"/></g>
+    <g><circle class="nh pulse3" cx="282" cy="78" r="7"/><circle class="nh pulse" cx="282" cy="126" r="7"/><circle class="nh pulse2" cx="282" cy="174" r="7"/></g>
+    <g><circle class="no pulse" cx="390" cy="106" r="8"/><circle class="no pulse3" cx="390" cy="158" r="8"/></g>
+    <g class="mono" fill="#475569" font-size="9"><text x="43" y="221">INPUT</text><text x="141" y="221">HIDDEN 01</text><text x="255" y="221">HIDDEN 02</text><text x="370" y="221">OUTPUT</text></g>
+  </g>
+
+  <g transform="translate(516 264)">
+    <rect width="638" height="242" rx="18" fill="#07101f" fill-opacity=".83" stroke="#1e293b"/>
+    <text class="mono" x="22" y="32" fill="#64748b" font-size="11" letter-spacing="1.7">OPTIMIZATION TELEMETRY</text>
+    <g class="mono" font-size="11">
+      <text x="448" y="32" fill="#64748b">epoch</text><text x="495" y="32" fill="#e2e8f0">150</text>
+      <text x="540" y="32" fill="#64748b">lr</text><text x="563" y="32" fill="#67e8f9">3e-4</text>
+    </g>
+    <g transform="translate(22 52)">
+      <path d="M0 0V139H382" fill="none" stroke="#334155"/>
+      <g stroke="#1e293b" stroke-dasharray="3 6"><path d="M0 35H382M0 70H382M0 105H382"/></g>
+      <text class="mono" x="7" y="16" fill="#475569" font-size="9">LOSS</text>
+      <path class="loss" d="M8 17 C38 19 44 42 72 45 S106 82 139 77 S171 105 204 101 S246 123 280 118 S326 129 374 130"/>
+      <circle cx="374" cy="130" r="4" fill="#22d3ee" filter="url(#glow)" class="pulse"/>
+      <text class="mono" x="316" y="118" fill="#67e8f9" font-size="10">0.0842</text>
+      <text class="mono" x="0" y="158" fill="#475569" font-size="9">0</text><text class="mono" x="356" y="158" fill="#475569" font-size="9">EPOCH</text>
+    </g>
+    <g class="mono" transform="translate(430 66)" font-size="11">
+      <text x="0" y="0" fill="#475569">architecture</text><text x="0" y="20" fill="#c4b5fd">Bi-LSTM / GRU</text>
+      <text x="0" y="52" fill="#475569">dataset</text><text x="0" y="72" fill="#e2e8f0">3,073 days</text>
+      <text x="0" y="104" fill="#475569">horizon</text><text x="0" y="124" fill="#e2e8f0">1 → 14 days</text>
+      <text x="0" y="156" fill="#475569">state</text><text x="0" y="176" fill="#34d399">converging</text><text class="cursor" x="68" y="176" fill="#34d399">_</text>
+    </g>
+  </g>
+
+  <g class="mono" font-size="10" fill="#475569">
+    <text x="58" y="530">PYTORCH  /  NUMPY  /  XGBOOST  /  FROM_SCRATCH</text>
+    <text x="1005" y="530">BRASÍLIA • 2026</text>
+  </g>
+</svg>
