@@ -74,7 +74,7 @@ I am a Computer Science developer from Brasília who likes to cross abstraction 
 ## The layers I like to explore
 
 <div align="center">
-  <img src="./assets/stack-matrix.svg" width="100%" alt="Animated stack matrix connecting intelligence, algorithms, languages, runtimes and systems" />
+  <img src="./assets/stack-matrix-v2.svg" width="100%" alt="Animated stack matrix connecting intelligence, algorithms, languages, runtimes and systems" />
 </div>
 
 <br />
