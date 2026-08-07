@@ -23,16 +23,16 @@
     .frame{fill:none;stroke:url(#spectrum);stroke-width:1.5;stroke-dasharray:140 920;animation:frame 7s linear infinite}
     .rail{fill:none;stroke:url(#fade);stroke-width:1.3;stroke-dasharray:4 11;animation:rail 2.8s linear infinite}
     .bus{fill:none;stroke:url(#spectrum);stroke-width:2;stroke-dasharray:5 13;animation:up 2.4s linear infinite;filter:url(#glow)}
-    .tag{animation:float 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-    .tag2{animation:float 4.8s -1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-    .tag3{animation:float 5.3s -2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .tag{animation:tagGlow 4s ease-in-out infinite}
+    .tag2{animation:tagGlow 4.8s -1.4s ease-in-out infinite}
+    .tag3{animation:tagGlow 5.3s -2.6s ease-in-out infinite}
     .scan{animation:scan 6s ease-in-out infinite}
     .live{animation:live 1.7s ease-in-out infinite}
     .bits{animation:bits 3s steps(2,end) infinite}
     @keyframes frame{to{stroke-dashoffset:-1060}}
     @keyframes rail{to{stroke-dashoffset:-60}}
     @keyframes up{to{stroke-dashoffset:72}}
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+    @keyframes tagGlow{0%,100%{opacity:.78}50%{opacity:1}}
     @keyframes scan{0%,100%{transform:translateX(0);opacity:0}8%,82%{opacity:.55}92%{transform:translateX(910px);opacity:0}}
     @keyframes live{50%{opacity:.35}}
     @keyframes bits{50%{opacity:.3}}
