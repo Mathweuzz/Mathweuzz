@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Animated technology stack matrix</title>
+  <desc id="desc">Five animated layers connect artificial intelligence, algorithms, languages, runtimes and systems.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#050914"/><stop offset=".55" stop-color="#081120"/><stop offset="1" stop-color="#100a1d"/>
+    </linearGradient>
+    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#22d3ee"/><stop offset=".48" stop-color="#8b5cf6"/><stop offset="1" stop-color="#fb7185"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#22d3ee" stop-opacity="0"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#fb7185" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="core"><stop stop-color="#fff"/><stop offset=".2" stop-color="#67e8f9"/><stop offset="1" stop-color="#7c3aed"/></radialGradient>
+    <filter id="glow" x="-200%" y="-200%" width="400%" height="400%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="soft" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="22"/></filter>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#93c5fd" stroke-width="1" stroke-opacity=".04"/></pattern>
+    <clipPath id="clip"><rect x="14" y="14" width="1172" height="492" rx="24"/></clipPath>
+  </defs>
+  <style>
+    .sans{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+    .frame{fill:none;stroke:url(#spectrum);stroke-width:1.5;stroke-dasharray:140 920;animation:frame 7s linear infinite}
+    .rail{fill:none;stroke:url(#fade);stroke-width:1.3;stroke-dasharray:4 11;animation:rail 2.8s linear infinite}
+    .bus{fill:none;stroke:url(#spectrum);stroke-width:2;stroke-dasharray:5 13;animation:up 2.4s linear infinite;filter:url(#glow)}
+    .tag{animation:float 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .tag2{animation:float 4.8s -1.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .tag3{animation:float 5.3s -2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    .scan{animation:scan 6s ease-in-out infinite}
+    .live{animation:live 1.7s ease-in-out infinite}
+    .bits{animation:bits 3s steps(2,end) infinite}
+    @keyframes frame{to{stroke-dashoffset:-1060}}
+    @keyframes rail{to{stroke-dashoffset:-60}}
+    @keyframes up{to{stroke-dashoffset:72}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+    @keyframes scan{0%,100%{transform:translateX(0);opacity:0}8%,82%{opacity:.55}92%{transform:translateX(910px);opacity:0}}
+    @keyframes live{50%{opacity:.35}}
+    @keyframes bits{50%{opacity:.3}}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+
+  <rect x="14" y="14" width="1172" height="492" rx="24" fill="url(#bg)" stroke="#334155"/>
+  <rect class="frame" x="14" y="14" width="1172" height="492" rx="24"/>
+  <g clip-path="url(#clip)">
+    <rect x="14" y="14" width="1172" height="492" fill="url(#grid)"/>
+    <circle cx="1085" cy="35" r="210" fill="#7c3aed" opacity=".11" filter="url(#soft)"/>
+    <circle cx="90" cy="490" r="180" fill="#0891b2" opacity=".09" filter="url(#soft)"/>
+    <rect class="scan" x="260" y="66" width="1.2" height="411" fill="#67e8f9" filter="url(#glow)"/>
+  </g>
+
+  <g class="sans">
+    <text x="44" y="48" fill="#94a3b8" font-size="11" font-weight="700" letter-spacing="2.4">ABSTRACTION MATRIX</text>
+    <text x="1060" y="48" fill="#475569" font-size="10" letter-spacing="1.5">5 LAYERS</text>
+    <circle class="live" cx="1038" cy="44" r="3.5" fill="#34d399" filter="url(#glow)"/>
+  </g>
+  <path d="M44 63H1156" stroke="#1e293b"/>
+
+  <!-- abstraction spine -->
+  <g>
+    <path d="M236 454V95" stroke="#1e293b" stroke-width="5" stroke-linecap="round"/>
+    <path class="bus" d="M236 454V95"/>
+    <circle cx="236" cy="95" r="9" fill="url(#core)" filter="url(#glow)"/>
+    <circle cx="236" cy="454" r="6" fill="#22d3ee" opacity=".7" filter="url(#glow)"/>
+    <text class="mono" x="221" y="82" fill="#64748b" font-size="9">HIGH</text>
+    <text class="mono" x="219" y="476" fill="#64748b" font-size="9">ROOT</text>
+  </g>
+
+  <!-- layer rails -->
+  <g class="rail">
+    <path d="M248 106H1138"/><path d="M248 190H1138"/><path d="M248 274H1138"/><path d="M248 358H1138"/><path d="M248 442H1138"/>
+  </g>
+
+  <!-- traveling signals -->
+  <g fill="#67e8f9" filter="url(#glow)">
+    <circle r="3"><animateMotion dur="4.8s" repeatCount="indefinite" path="M252 106H880"/></circle>
+    <circle r="3"><animateMotion dur="5.7s" begin="-2s" repeatCount="indefinite" path="M252 190H1040"/></circle>
+    <circle r="3"><animateMotion dur="4.3s" begin="-1s" repeatCount="indefinite" path="M252 274H930"/></circle>
+    <circle r="3"><animateMotion dur="6.1s" begin="-3s" repeatCount="indefinite" path="M252 358H1090"/></circle>
+    <circle r="3"><animateMotion dur="5.2s" begin="-4s" repeatCount="indefinite" path="M252 442H990"/></circle>
+  </g>
+
+  <!-- labels -->
+  <g class="sans" font-weight="700">
+    <text x="48" y="101" fill="#c4b5fd" font-size="10" letter-spacing="1.8">LAYER 05</text><text x="48" y="123" fill="#f8fafc" font-size="17">INTELLIGENCE</text>
+    <text x="48" y="185" fill="#a5b4fc" font-size="10" letter-spacing="1.8">LAYER 04</text><text x="48" y="207" fill="#f8fafc" font-size="17">ALGORITHMS</text>
+    <text x="48" y="269" fill="#67e8f9" font-size="10" letter-spacing="1.8">LAYER 03</text><text x="48" y="291" fill="#f8fafc" font-size="17">LANGUAGES</text>
+    <text x="48" y="353" fill="#5eead4" font-size="10" letter-spacing="1.8">LAYER 02</text><text x="48" y="375" fill="#f8fafc" font-size="17">RUNTIMES</text>
+    <text x="48" y="437" fill="#fda4af" font-size="10" letter-spacing="1.8">LAYER 01</text><text x="48" y="459" fill="#f8fafc" font-size="17">SYSTEMS</text>
+  </g>
+
+  <!-- intelligence tags -->
+  <g class="sans" font-size="13" font-weight="650">
+    <g class="tag" transform="translate(278 84)"><rect width="120" height="43" rx="12" fill="#15102c" stroke="#6d5bd0"/><circle cx="18" cy="21.5" r="4" fill="#a78bfa"/><text x="31" y="26" fill="#ede9fe">PyTorch</text></g>
+    <g class="tag2" transform="translate(414 84)"><rect width="122" height="43" rx="12" fill="#0b1c2a" stroke="#0e7490"/><circle cx="18" cy="21.5" r="4" fill="#22d3ee"/><text x="31" y="26" fill="#cffafe">XGBoost</text></g>
+    <g class="tag3" transform="translate(552 84)"><rect width="152" height="43" rx="12" fill="#15102c" stroke="#6d5bd0"/><circle cx="18" cy="21.5" r="4" fill="#c4b5fd"/><text x="31" y="26" fill="#ede9fe">Neuroevolution</text></g>
+    <g class="tag2" transform="translate(720 84)"><rect width="133" height="43" rx="12" fill="#0b1c2a" stroke="#0e7490"/><circle cx="18" cy="21.5" r="4" fill="#67e8f9"/><text x="31" y="26" fill="#cffafe">Time Series</text></g>
+    <g class="tag" transform="translate(869 84)"><rect width="151" height="43" rx="12" fill="#15102c" stroke="#6d5bd0"/><circle cx="18" cy="21.5" r="4" fill="#a78bfa"/><text x="31" y="26" fill="#ede9fe">Computer Vision</text></g>
+
+    <!-- algorithm tags -->
+    <g class="tag2" transform="translate(278 168)"><rect width="82" height="43" rx="12" fill="#10162b" stroke="#4f46a5"/><text x="20" y="26" fill="#e0e7ff">PCA</text></g>
+    <g class="tag3" transform="translate(376 168)"><rect width="82" height="43" rx="12" fill="#10162b" stroke="#4f46a5"/><text x="20" y="26" fill="#e0e7ff">SVD</text></g>
+    <g class="tag" transform="translate(474 168)"><rect width="101" height="43" rx="12" fill="#0b1c2a" stroke="#0e7490"/><text x="20" y="26" fill="#cffafe">Search</text></g>
+    <g class="tag3" transform="translate(591 168)"><rect width="101" height="43" rx="12" fill="#10162b" stroke="#4f46a5"/><text x="20" y="26" fill="#e0e7ff">Graphs</text></g>
+    <g class="tag2" transform="translate(708 168)"><rect width="132" height="43" rx="12" fill="#0b1c2a" stroke="#0e7490"/><text x="20" y="26" fill="#cffafe">Optimization</text></g>
+    <g class="tag" transform="translate(856 168)"><rect width="147" height="43" rx="12" fill="#10162b" stroke="#4f46a5"/><text x="20" y="26" fill="#e0e7ff">Linear Algebra</text></g>
+
+    <!-- language tags -->
+    <g class="tag3" transform="translate(278 252)"><rect width="106" height="43" rx="12" fill="#071d28" stroke="#0891b2"/><text x="20" y="26" fill="#cffafe">Python</text></g>
+    <g class="tag" transform="translate(400 252)"><rect width="63" height="43" rx="12" fill="#071d28" stroke="#0891b2"/><text x="22" y="26" fill="#cffafe">C</text></g>
+    <g class="tag2" transform="translate(479 252)"><rect width="78" height="43" rx="12" fill="#071d28" stroke="#0891b2"/><text x="20" y="26" fill="#cffafe">C++</text></g>
+    <g class="tag3" transform="translate(573 252)"><rect width="86" height="43" rx="12" fill="#071d28" stroke="#0891b2"/><text x="20" y="26" fill="#cffafe">Java</text></g>
+    <g class="tag" transform="translate(675 252)"><rect width="126" height="43" rx="12" fill="#10162b" stroke="#4f46a5"/><text x="20" y="26" fill="#e0e7ff">TypeScript</text></g>
+    <g class="tag2" transform="translate(817 252)"><rect width="106" height="43" rx="12" fill="#071d28" stroke="#0891b2"/><text x="20" y="26" fill="#cffafe">Oberon</text></g>
+    <g class="tag3" transform="translate(939 252)"><rect width="93" height="43" rx="12" fill="#10162b" stroke="#4f46a5"/><text x="20" y="26" fill="#e0e7ff">COBOL</text></g>
+
+    <!-- runtime tags -->
+    <g class="tag" transform="translate(278 336)"><rect width="126" height="43" rx="12" fill="#09211f" stroke="#0f766e"/><text x="20" y="26" fill="#ccfbf1">JVM 8</text></g>
+    <g class="tag3" transform="translate(420 336)"><rect width="126" height="43" rx="12" fill="#09211f" stroke="#0f766e"/><text x="20" y="26" fill="#ccfbf1">Bytecode</text></g>
+    <g class="tag2" transform="translate(562 336)"><rect width="138" height="43" rx="12" fill="#09211f" stroke="#0f766e"/><text x="20" y="26" fill="#ccfbf1">Interpreters</text></g>
+    <g class="tag" transform="translate(716 336)"><rect width="153" height="43" rx="12" fill="#10162b" stroke="#4f46a5"/><text x="20" y="26" fill="#e0e7ff">Virtual Machines</text></g>
+    <g class="tag3" transform="translate(885 336)"><rect width="126" height="43" rx="12" fill="#09211f" stroke="#0f766e"/><text x="20" y="26" fill="#ccfbf1">Parsers</text></g>
+
+    <!-- system tags -->
+    <g class="tag2" transform="translate(278 420)"><rect width="101" height="43" rx="12" fill="#28101c" stroke="#9f4961"/><text x="20" y="26" fill="#ffe4e6">Linux</text></g>
+    <g class="tag" transform="translate(395 420)"><rect width="124" height="43" rx="12" fill="#28101c" stroke="#9f4961"/><text x="20" y="26" fill="#ffe4e6">Assembly</text></g>
+    <g class="tag3" transform="translate(535 420)"><rect width="112" height="43" rx="12" fill="#28101c" stroke="#9f4961"/><text x="20" y="26" fill="#ffe4e6">Sockets</text></g>
+    <g class="tag2" transform="translate(663 420)"><rect width="92" height="43" rx="12" fill="#28101c" stroke="#9f4961"/><text x="20" y="26" fill="#ffe4e6">SQL</text></g>
+    <g class="tag" transform="translate(771 420)"><rect width="91" height="43" rx="12" fill="#28101c" stroke="#9f4961"/><text x="20" y="26" fill="#ffe4e6">HTTP</text></g>
+    <g class="tag3" transform="translate(878 420)"><rect width="100" height="43" rx="12" fill="#28101c" stroke="#9f4961"/><text x="20" y="26" fill="#ffe4e6">Docker</text></g>
+  </g>
+
+  <g class="mono bits" fill="#334155" font-size="8"><text x="1090" y="104">10110</text><text x="1090" y="188">01101</text><text x="1090" y="272">11010</text><text x="1090" y="356">00111</text><text x="1090" y="440">10001</text></g>
+  <text class="mono" x="1015" y="488" fill="#475569" font-size="9" letter-spacing="1.2">SIGNAL: NOMINAL</text>
+</svg>

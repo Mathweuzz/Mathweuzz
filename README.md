@@ -73,20 +73,8 @@ I am a Computer Science developer from Brasília who likes to cross abstraction 
 
 ## The layers I like to explore
 
-```text
-       intelligence     PyTorch · XGBoost · neuroevolution · time series
-            ▲
-       algorithms       PCA · SVD · search · graphs · optimization
-            ▲
-        languages       compilers · fuzzing · parsers · Oberon · BASIC
-            ▲
-         runtimes       JVM bytecode · virtual machines · interpreters
-            ▲
-          systems       C · Assembly · sockets · Linux · SQL · COBOL
-```
-
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=python,pytorch,c,cpp,java,ts,postgres,linux,git,docker&theme=dark&perline=10" alt="Python, PyTorch, C, C++, Java, TypeScript, PostgreSQL, Linux, Git and Docker" />
+  <img src="./assets/stack-matrix.svg" width="100%" alt="Animated stack matrix connecting intelligence, algorithms, languages, runtimes and systems" />
 </div>
 
 <br />
